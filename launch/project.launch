@@ -1,0 +1,27 @@
+<!-- Author: Michele Sprocatti-->
+<launch>
+    <!-- <arg name="rviz"  default="true"/> -->
+
+    <include file = "$(find tiago_iaslab_simulation)/launch/start_simulation.launch">
+        <arg name = "world_name" value = "iaslab_assignment2"/>
+    </include>
+
+    <include file = "$(find tiago_iaslab_simulation)/launch/navigation.launch"/>
+
+    <include file = "$(find tiago_iaslab_simulation)/launch/apriltag2.launch"/>
+
+    <node pkg = "ir2425_group_07_assignment2" type = "ir2425_group_07_assignment2_waypoint_navigation" name = "navigation_robot"/>
+
+    <node pkg = "tiago_iaslab_simulation" type = "get_straightline_node" name = "get_straightline_generaator" />
+
+    <node pkg = "ir2425_group_07_assignment2" type = "ir2425_group_07_assignment2_arm" name = "arm"/>
+
+    <node pkg = "ir2425_group_07_assignment2" type = "ir2425_group_07_assignment2_pointLine" name = "pointLine"/>
+
+    <node pkg = "ir2425_group_07_assignment2" type = "ir2425_group_07_assignment2_detection" name = "detection"/>
+
+    <!-- <group if="$(arg rviz)">
+             <node name="global_camera_rviz" pkg="rviz" type="rviz" args="-d $(find
+       ir2425_group_07_assignment2)/global_camera.rviz" />
+         </group> -->
+</launch>

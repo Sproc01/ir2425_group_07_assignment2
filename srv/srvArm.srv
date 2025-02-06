@@ -1,0 +1,7 @@
+Header header
+int32 pick_or_place
+geometry_msgs/PoseStamped target_pose
+string object_id
+---
+Header header
+bool done

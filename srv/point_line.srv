@@ -1,0 +1,10 @@
+Header header
+float64 m
+float64 q
+float64 x_max
+float64 y_max
+---
+Header header
+float64[] point1
+float64[] point2
+float64[] point3

@@ -1,0 +1,7 @@
+Header header
+int32 waypoint_num
+
+---
+
+Header header
+string status

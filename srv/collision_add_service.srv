@@ -1,0 +1,9 @@
+Header header
+int32 rq
+
+---
+
+Header header
+bool added
+int32[] ids_added
+geometry_msgs/PoseStamped[] positions_objects_added
